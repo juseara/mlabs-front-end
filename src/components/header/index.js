@@ -29,8 +29,8 @@ export default () => {
                         <Logo />
                         <nav>
                             <ListNav>
-                                <NavItem label="Dashboard" img={imgDashBoard} active/>
-                                <NavItem label="Agendar Post" img={imgAgendamento} />
+                                <NavItem label="Dashboard" path="/dashboard" img={imgDashBoard} active/>
+                                <NavItem label="Agendar Post" path="/agendamento" img={imgAgendamento} />
                                 <NavItem label="Calendario" img={imgCalendario} />
                                 <NavItem label="Inbox" img={imgInbox} />
                                 <NavItem label="Feed" img={imgNewsPaper} />
