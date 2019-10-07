@@ -36,8 +36,7 @@ export const Card = styled.div`
 `;
 
 export const IconHelp = styled.div`
-        position: relative;
-        top: 35px;
+        position: absolute;
         left: 36px;
         margin-left: 45.5px;
         width: 30px;
