@@ -7,6 +7,7 @@ export const ShadowMask = styled.div`
         height: 100%;
         transition: all 1.3s;
         width: 100%;
+        overflow-y:hidden;
 `
 
 export const ModalWrapper = styled.div`
@@ -22,12 +23,16 @@ export const ModalWrapper = styled.div`
     transition: all .8s;
     border-radius: 10px;
     z-index:${props => props.show ? 9999 : -1};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @media ${device.mobileS}{
         width: 100VW;
         height: 100VH;
         top:0;
         position: fixed; 
+        border-radius: 0;
         
     }
 
@@ -36,6 +41,7 @@ export const ModalWrapper = styled.div`
         height: 100VH;
         top:0;
         position: fixed; 
+        border-radius: 0;
         
     }
 
@@ -44,6 +50,7 @@ export const ModalWrapper = styled.div`
         height: 100VH;
         top:0;
         position: fixed; 
+        border-radius: 0;
         
     }
 
@@ -84,6 +91,7 @@ export const Logo = styled.div`
 `;
 
 export const ModalBody = styled.div`
+        height:100%;
         background: #e9eaed;
         padding: 10px 15px;
 `;

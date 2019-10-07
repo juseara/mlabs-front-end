@@ -19,6 +19,7 @@ body{
     font: 14px  prime sans-serif;
     background: #f7f7f7;
     -webkit-font-smoothing: antialiased !important;
+    
 }
 
 ul {
