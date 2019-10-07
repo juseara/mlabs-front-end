@@ -35,6 +35,33 @@ export const Card = styled.div`
        
 `;
 
+export const IconHelp = styled.div`
+        position: relative;
+        top: 35px;
+        left: 36px;
+        margin-left: 45.5px;
+        width: 30px;
+        height: 30px;
+        border: solid 2px #8b8d8f;
+        border-radius:30px;
+        cursor: pointer;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        :hover {
+                background-color: #8b8d8f;
+                
+                svg {
+                        color:#fff !important;
+                }
+                
+        }
+
+        
+        
+`;
+
 export const Image = styled.div`
         background: url(${props => `${props.img}`}) no-repeat 0 0;
         background-size: contain;
@@ -68,8 +95,12 @@ export const Button = styled.button`
         text-align: center;
         border-width:0;
 
-        :hover{
+        :hover {
                 opacity:0.5;
+        }
+
+        :active {
+                opacity:1!important;
         }
 `;
 
