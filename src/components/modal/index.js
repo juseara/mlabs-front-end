@@ -5,7 +5,12 @@ import { ShadowMask, ModalWrapper, ModalHeader, ModalBody, ModalFooter, CloseBut
 
 const Modal = (props) => {
 
-
+    if(props.show){
+        document.body.style.overflow = "hidden";
+    }
+    else{
+        document.body.style.overflow = "auto";
+    }
 
     return (
         <>

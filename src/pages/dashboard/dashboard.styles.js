@@ -33,3 +33,56 @@ export const GroupCard = styled.div`
     flex-wrap:wrap;
     justify-content:center;
 `;
+
+
+export const ProfileContainer = styled.div`
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    
+`;
+
+export const TitleProfile = styled.h3`
+    text-align:center;
+    font-family:  'Arial', sans-serif;
+    margin:30px;
+`;
+
+
+
+export const List = styled.ul`
+    margin-top: 20px;
+    width:100%;
+    max-height:30%;
+    min-height:100px;
+    overflow-y: scroll;
+    background-color:#e9eaed;
+`;
+
+export const ListItem = styled.li`
+    height:79px;
+    border-bottom: solid 1px #fff;
+`;
+
+export const Footer = styled.div`
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-family:  'Arial', sans-serif;
+    font-weight:bold;
+
+    span{
+        color:#989a9c;
+        margin-bottom:15px;
+        text-align: center;
+    }
+
+    a{
+        color:#4c90e2;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+`;

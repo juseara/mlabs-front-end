@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import { Container, Content, GroupCard } from './dashboard.styles'
+import { Container, Content, GroupCard, ProfileContainer, TitleProfile, List, ListItem, Footer } from './dashboard.styles'
 import facebook from '../../assets/social-img/facebook.png'
 import facebookLogged from '../../assets/social-img/facebook_logged.png'
 import Twitter from '../../assets/social-img/twitter.png';
@@ -83,9 +83,25 @@ const DashBoard = () => {
                 </GroupCard>
             </Content>
             <Modal {...modalOptions} onCancel={()=>setModal({show:false})}>
-                        <div>
+                        <ProfileContainer>
                             <Steper activeColor={"#f79f5e"} indexActive={1} labels={["Verificação", "Páginas","Segmentos", "Concorrentes"]}/>
-                        </div>
+                            <TitleProfile>Selecione a página que você deseja vincular a este perfil</TitleProfile>
+                            <List>
+                                <ListItem>
+
+                                </ListItem>
+                                <ListItem>
+
+                                </ListItem>
+                                <ListItem>
+
+                                </ListItem>
+                            </List>
+                            <Footer>
+                                <span>Não encontrou sua página?</span>
+                                <a href="#">Clique aqui para Atualizar suas permissões do Facebook.</a>
+                            </Footer>
+                        </ProfileContainer>
             </Modal>
         </Container>
     )

@@ -62,7 +62,7 @@ export const ModalWrapper = styled.div`
 export const ModalHeader = styled.div`
 
     background: #ffff;
-    padding: 30px;
+    padding: 18px;
     border-bottom: 1px solid #d0d0d0;
     border-radius: 10px 10px 0 0px;
     display:flex;
@@ -93,7 +93,9 @@ export const Logo = styled.div`
 `;
 
 export const ModalBody = styled.div`
-        height:100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
         background: #fff;
         padding: 10px 15px;
 `;
