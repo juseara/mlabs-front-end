@@ -8,21 +8,20 @@ const Steper = (props) => {
         <Container>
             <ContentProgress>
                 <Progress>
-                    {props.labels.map((item,index) => {
-                        return (
-                            <>
-                                <Cicle activeColor={props.activeColor} inactiveColor={props.inactiveColor} active={(index <= props.indexActive)} />
-                                <Line  activeColor={props.activeColor} inactiveColor={props.inactiveColor} active={(index < props.indexActive)} />
-                            </>
-                        )
-                    })}
+                    
+                    {props.labels.map((item,index) =>                     
+                            <React.Fragment key={index}>
+                                <Cicle key={`c-${index}`} activeColor={props.activeColor} inactiveColor={props.inactiveColor} active={(index <= props.indexActive)} />
+                                <Line  key={`l-${index}`} activeColor={props.activeColor} inactiveColor={props.inactiveColor} active={(index < props.indexActive)} />
+                            </React.Fragment>                        
+                    )}
 
                 </Progress>
 
             </ContentProgress>
             <ContentLabel>
                 {props.labels.map((item,index) => {
-                    return (<Label activeColor={"#AAAAA"} inactiveColor={props.inactiveColor} active={(index <= props.indexActive)}>{item}</Label>)
+                    return (<Label key={`la-${index}`} activeColor={"#AAAAA"} inactiveColor={props.inactiveColor} active={(index <= props.indexActive)}>{item}</Label>)
                 })}
             </ContentLabel>
         </Container>

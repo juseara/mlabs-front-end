@@ -4,8 +4,9 @@ import { FaQuestion } from 'react-icons/fa'
 import {Card, Image, Tile, Button, Header, CardLoged, ImageLoged, IconHelp } from './socialCard.styles';
 
 const SocialCard = (props) => {
-
+    
     return(
+        
         <>
             {
                 !props.profile? 
@@ -23,7 +24,7 @@ const SocialCard = (props) => {
                 :
                     <CardLoged onClick={props.onPressButton} color={props.primaryColor}>
                         <Header color={props.primaryColor}>
-                            <span>TechZé</span>
+                            <span>{props.profile.name}</span>
                         </Header>
                         <ImageLoged image={props.imageLogged}/>
                     </CardLoged>

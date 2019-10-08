@@ -35,36 +35,40 @@ export const GroupCard = styled.div`
 `;
 
 
-export const ProfileContainer = styled.div`
+export const PageContainer = styled.div`
     display: flex;
     flex: 1;
     flex-direction: column;
     
 `;
 
-export const TitleProfile = styled.h3`
+export const PageTitle = styled.h3`
     text-align:center;
     font-family:  'Arial', sans-serif;
-    margin:30px;
+    
 `;
 
 
 
-export const List = styled.ul`
+export const PageList = styled.ul`
     margin-top: 20px;
     width:100%;
-    max-height:30%;
+    max-height:180px;
     min-height:100px;
     overflow-y: scroll;
     background-color:#e9eaed;
 `;
 
-export const ListItem = styled.li`
+export const PageListItem = styled.li`
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
     height:79px;
     border-bottom: solid 1px #fff;
+    padding: 0 10px 0 10px;
 `;
 
-export const Footer = styled.div`
+export const PageFooter = styled.div`
     display:flex;
     flex:1;
     flex-direction:column;
@@ -86,3 +90,36 @@ export const Footer = styled.div`
     }
 
 `;
+
+export const PageImage = styled.div`
+    width: 49px;
+    height: 49px;
+    background: #fafafa url(${props=> `${props.image}`}) no-repeat center center;
+    background-size: cover;
+    border: solid 1px #dadada;
+`;
+
+export const PageLabelContent = styled.div`
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    flex:1;
+    padding:5px;
+
+    span{
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #555;
+        line-height: 21px;
+    }
+
+    small{
+        font-family: 'Arial', sans-serif;
+        font-weight: normal;
+        font-size: 13px;
+        color: #777;
+        line-height: 20px;
+    }
+`;
+
