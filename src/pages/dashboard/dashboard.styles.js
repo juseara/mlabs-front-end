@@ -66,6 +66,10 @@ export const PageListItem = styled.li`
     height:79px;
     border-bottom: solid 1px #fff;
     padding: 0 10px 0 10px;
+    
+    &:hover{
+        background: #9aecff;
+    }
 `;
 
 export const PageFooter = styled.div`
