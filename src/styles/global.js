@@ -3,6 +3,15 @@ export default createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css?family=Turret+Road&display=swap');
 
+@font-face {
+    font-family: Prime Light;
+    src: url('../../assets/fonts/prime/Prime-Light.otf');
+}
+
+@font-face {
+    font-family: Prime;
+    src: url('../../assets/fonts/prime/Prime-Regular.otf');
+}
 
 *{
     margin: 0;

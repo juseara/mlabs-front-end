@@ -6,15 +6,16 @@ import Twitter from '../../assets/social-img/twitter.png';
 import TwitterLogged from '../../assets/social-img/twitter_logged.png';
 import Instagram from '../../assets/social-img/instagram.png';
 import InstagramLogged from '../../assets/social-img/instagram_logged.png';
-import { SocialCard, Modal } from '../../components'
+import { SocialCard, Modal, Steper } from '../../components'
+
 
 const DashBoard = () => {
     const [modalOptions, setModal] = useState({
-        show:false,
+        show:true,
        
     })
 
-    const [sociaisCards, setSocialCards] = useState([
+    const [sociaisCards] = useState([
         {
             key:'facebook',
             title:'Facebook',
@@ -82,8 +83,8 @@ const DashBoard = () => {
                 </GroupCard>
             </Content>
             <Modal {...modalOptions} onCancel={()=>setModal({show:false})}>
-                        <div style={{height:'400px'}}>
-
+                        <div>
+                            <Steper activeColor={"#f79f5e"} indexActive={1} labels={["Verificação", "Páginas","Segmentos", "Concorrentes"]}/>
                         </div>
             </Modal>
         </Container>

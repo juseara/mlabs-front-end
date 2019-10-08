@@ -14,7 +14,9 @@ export const ModalWrapper = styled.div`
     
     position: absolute;
     top:30px;
-    width: 60%;
+    width: 60VW;
+    height: 80VH;
+    min-height:400px;
     transform: ${props => props.show ? 'translateY(0vh)' : 'translateY(-100vh)'};
     opacity: ${props => props.show ? '1' : '0'};
     background: white;
@@ -92,7 +94,7 @@ export const Logo = styled.div`
 
 export const ModalBody = styled.div`
         height:100%;
-        background: #e9eaed;
+        background: #fff;
         padding: 10px 15px;
 `;
 
