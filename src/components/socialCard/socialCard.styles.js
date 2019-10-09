@@ -84,7 +84,7 @@ export const IconHelp = styled.div`
 `;
 
 export const Image = styled.div`
-        background: url(${props => `${props.img}`}) no-repeat 0 0;
+        background: url(${props => `${props.image}`}) no-repeat 0 0;
         background-size: contain;
         width: 60px;
         height: 60px;
@@ -92,7 +92,7 @@ export const Image = styled.div`
         
 `;
 
-export const Tile = styled.h3`
+export const Title = styled.h3`
         font-family: 'Turret Road';
         font-weight: normal;
         font-size: 20px;

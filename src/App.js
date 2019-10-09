@@ -10,7 +10,7 @@ function App() {
       <main >
         <Routes />
       </main>
-      <GlobalStyle/>
+      <GlobalStyle />
     </>
   );
 }

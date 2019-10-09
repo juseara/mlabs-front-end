@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] SocialCard Deve renderizar o card com página vinculada corretamente 1`] = `ReactWrapper {}`;
+
+exports[`[Component] SocialCard Deve renderizar o card sem página vinculada corretamente 1`] = `ReactWrapper {}`;

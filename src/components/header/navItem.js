@@ -26,7 +26,7 @@ NavItem.propTypes={
 NavItem.defaultProps={
     img:'',
     path:'/',
-    label:'teste',
+    label:'',
     active:false,
 }
 
