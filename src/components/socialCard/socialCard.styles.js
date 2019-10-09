@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import { device } from '../../styles/devices'
 
-export const Card = styled.div`
+
+export const SlotCard = styled.div`
         width:20%;
         height:260px;
         background: #F0F0F0;
-        border: 2px dotted #cbcccd;
+        position: relative;
         display:flex;
         flex-direction:column;
         justify-content:space-around;
         align-items:center;
-        padding: 40px 0;
+
 
         @media ${device.laptop} {
                 width:30%;
@@ -31,7 +32,28 @@ export const Card = styled.div`
         @media ${device.mobileL} {
                 width:100%;
         }
+`;
 
+export const Card = styled.div`
+        width:100%;
+        height:100%;
+        background: #F0F0F0;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        border: 2px dotted #cbcccd;
+        padding: 40px 0;
+        position: relative;
+
+        *::after{
+                contain:'';
+                box-sizing: border-box;
+                
+                
+        }
+
+        
        
 `;
 
@@ -104,64 +126,30 @@ export const Button = styled.button`
 `;
 
 export const CardLoged = styled.div`
-        width:20%;
-        height:260px;
+        width:100%;
+        height:100%;
         background: ${props => `${props.color}`};
-        border: 0;
         display:flex;
         flex-direction:column;
         justify-content:flex-start;
         align-items:center;
         transition: all 0.2s ease-out 0s;
+        position: relative;
+        border: 0;
+        z-index:10;
 
-        @media ${device.laptop} {
-                width:30%;
-        }
-
-        @media ${device.tablet} {
-                width:40%;
-        }
-
-        @media ${device.mobileS} {
-                width:100%;
-        }
-
-        @media ${device.mobileM} {
-                width:100%;
-        }
-
-        @media ${device.mobileL} {
-                width:100%;
-        }
+      
 
         :hover{
                 
-                width:24%;
+                width:114%;
+                height:114%;
                 margin: -7px;
                 box-sizing: content-box;
                 box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
-                z-index: 12;
+                z-index: 40;
                 height:296px;
-                z-index:100;
-
-                @media ${device.laptop} {
-                        width:40%;
-                }
-                @media ${device.tablet} {
-                        width:50%;
-                }
-
-                @media ${device.mobileS} {
-                        width:114%;
-                }
-
-                @media ${device.mobileM} {
-                        width:114%;
-                }
-
-                @media ${device.mobileL} {
-                        width:114%;
-                }
+               
         }
 `;
 

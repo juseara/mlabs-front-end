@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FaQuestion } from 'react-icons/fa'
-import {Card, Image, Tile, Button, Header, CardLoged, ImageLoged, IconHelp } from './socialCard.styles';
+import {SlotCard ,Card, Image, Tile, Button, Header, CardLoged, ImageLoged, IconHelp } from './socialCard.styles';
 
 const SocialCard = (props) => {
     
     return(
         
-        <>
+        <SlotCard>
             {
                 !props.profile? 
                     <Card>
@@ -31,7 +31,7 @@ const SocialCard = (props) => {
                 
             }
                
-        </>
+        </SlotCard>
     )
 }
 

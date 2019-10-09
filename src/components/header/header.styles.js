@@ -47,7 +47,7 @@ export const NavRoutes = styled.div`
 
 export const Logo = styled.h1`
     width: 160px;
-    height:65px;
+    height:62px;
     margin: 11px 10px 0 0;
     background-image: url(${imgLogo});    
 `;

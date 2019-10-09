@@ -8,6 +8,7 @@ export const ShadowMask = styled.div`
         transition: all 1.3s;
         width: 100%;
         overflow-y:hidden;
+        z-index:50;
 `
 
 export const ModalWrapper = styled.div`

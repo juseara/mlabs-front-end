@@ -28,10 +28,13 @@ export const Content = styled.div`
 `;
 
 export const GroupCard = styled.div`
+    flex:1;
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:center;
+    
+    
 `;
 
 
@@ -91,6 +94,7 @@ export const PageFooter = styled.div`
         color:#4c90e2;
         text-decoration: underline;
         text-align: center;
+        
     }
 
 `;
@@ -124,6 +128,14 @@ export const PageLabelContent = styled.div`
         font-size: 13px;
         color: #777;
         line-height: 20px;
+        white-space: -moz-pre-wrap !important;  
+        white-space: -pre-wrap;      
+        white-space: -o-pre-wrap;    
+        white-space: pre-wrap;       
+        word-wrap: break-word;       
+        white-space: -webkit-pre-wrap; 
+        word-break: break-all;
+        white-space: normal;
     }
 `;
 
