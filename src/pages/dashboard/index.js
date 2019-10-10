@@ -38,28 +38,38 @@ const DashBoard = () => {
             
     }, [page])
 
+    
+
     useEffect(() =>{
+
         const fetchPages = async () => {
             const response = await pageService.getAllPages();
+            
             setPages(response);
         }
+        
         const fetchSocialMedia = async () => {
             const response = await socialMediaService.getAllSocialMedias();
-            
-            setSocialMedias(response.map(social=>{
-                return {
-                    ...social,
-                     function: () => {
-                        setChannel(`${social.key}`)
-
-                        setModal({
-                            show: true,
-                            title: `Adicionar ${social.title}`,
-                            image: social.image,
-                        })
+            try {
+                console.log("REPONSE 1 -----------", response)    
+                setSocialMedias(response.map(social=>{
+                    return {
+                        ...social,
+                         function: () => {
+                            setChannel(`${social.key}`)
+    
+                            setModal({
+                                show: true,
+                                title: `Adicionar ${social.title}`,
+                                image: social.image,
+                            })
+                        }
                     }
-                }
-            }));
+                }));    
+            } catch (error) {
+                console.log(error)
+            }
+            
         }
 
         
@@ -120,11 +130,13 @@ const DashBoard = () => {
         setModal({ show: false })
     }
     return (
-        <Container>
-            <Content>
-                <GroupCard>
+        <Container id="container">
+            <Content id="content">
+                <GroupCard id="group-card">
                     {socialMedias.map((social, index) =>
                         <SocialCard
+                            id={index}
+                            key={index}
                             onPressButton={social.function}
                             key={index}
                             primaryColor={social.color}

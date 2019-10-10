@@ -7,10 +7,10 @@ const SocialCard = (props) => {
     
     return(
         
-        <SlotCard>
+        <SlotCard id={`card-${props.id}`}>
             {
                 !props.profile? 
-                    <Card>
+                    <Card id={`card-not-logged-${props.id}`}>
                         <div style={{position:"relative"}}>
                             <IconHelp>
                                     <FaQuestion color="#8b8d8f"/>
@@ -22,7 +22,7 @@ const SocialCard = (props) => {
                     </Card>
           
                 :
-                    <CardLoged onClick={props.onPressButton} color={props.primaryColor}>
+                    <CardLoged id={`card-logged-${props.id}`}onClick={props.onPressButton} color={props.primaryColor}>
                         <Header color={props.primaryColor}>
                             <span>{props.profile.name}</span>
                         </Header>
@@ -36,6 +36,7 @@ const SocialCard = (props) => {
 }
 
 SocialCard.propTypes={
+    id:PropTypes.string,
     image:PropTypes.string,
     imageLogged:PropTypes.string,
     title:PropTypes.string,
@@ -45,6 +46,7 @@ SocialCard.propTypes={
 }
 
 SocialCard.defaultProps={
+    id:'',
     image:'',
     imageLogged:'',
     title:'social',

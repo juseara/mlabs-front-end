@@ -96,10 +96,18 @@ const socialMedias = [
 
 
 const getAllSocialMedias = () => {
-    return new Promise((resolver)=> {
-        const storagePages = storageService.getPages();
+    return new Promise((resolver,reject)=> {
 
-        return resolver(socialMedias.map(card => ({...card,profile: storagePages[card.key]? card.profile = storagePages[card.key]:card.profile})))
+        try {
+            const storagePages = storageService.getPages();
+
+            return resolver(socialMedias.map(card => ({...card,profile: storagePages[card.key]? card.profile = storagePages[card.key]:card.profile})))    
+        } catch (error) {
+            console.log("DEU ERRO NO SERVIÇO",error)
+            reject(error)
+        }
+        
+        
     })
 }
 
